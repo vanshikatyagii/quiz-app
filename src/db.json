@@ -1,0 +1,28 @@
+{
+  "quizzes": [
+    {
+      "id": "1",
+      "category": "General Knowledge",
+      "question": "Sample Question 1?",
+      "options": [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+      ],
+      "answer": "Option A"
+    },
+    {
+      "id": "c438",
+      "quizName": "abc",
+      "questions": [
+        {
+          "question": "helooooo",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "heyyyyy"
+        }
+      ]
+    }
+  ]
+}

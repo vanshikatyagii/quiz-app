@@ -17,6 +17,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Accordion expand icon
+import axios from "axios";
 
 function CreateQuiz() {
   const [quizName, setQuizName] = useState(""); // Quiz name state
@@ -32,6 +33,34 @@ function CreateQuiz() {
     if (currentAnswer) {
       setCurrentOptions([...currentOptions, currentAnswer]); // Add the new option to the list
       setCurrentAnswer(""); // Clear the answer input for the next option
+    }
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    
+    if (quizName && questions.length > 0) {
+      const newQuiz = {
+        quizName: quizName,
+        questions: questions,
+      };
+      try {
+        const response = await axios.post('http://localhost:3001/quizzes', newQuiz, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (response.status === 201) {
+          alert('Quiz saved successfully!');
+        } else {
+          alert('Failed to save quiz.');
+        }
+      } catch (error) {
+        console.error('Error saving quiz:', error);
+        alert('An error occurred while saving the quiz.');
+      }
+    } else {
+      alert('Please complete the quiz details and add at least one question.');
     }
   };
 
@@ -70,6 +99,7 @@ function CreateQuiz() {
       };
       console.log("Quiz Saved:", newQuiz); // Log the quiz to the console
       alert("Quiz saved successfully!");
+      handleSubmit();
     } else {
       alert("Please complete the quiz details and add at least one question.");
     }
