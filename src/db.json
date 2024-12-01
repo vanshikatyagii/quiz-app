@@ -1,26 +1,123 @@
 {
   "quizzes": [
     {
-      "id": "1",
-      "category": "General Knowledge",
-      "question": "Sample Question 1?",
-      "options": [
-        "Option A",
-        "Option B",
-        "Option C",
-        "Option D"
-      ],
-      "answer": "Option A"
-    },
-    {
-      "id": "c438",
-      "quizName": "abc",
+      "id": "1001",
+      "quizName": "General Knowledge Quiz",
       "questions": [
         {
-          "question": "helooooo",
+          "question": "Which animal is known as the 'Ship of the Desert'?",
+          "type": "mcq",
+          "options": [
+            "Camel",
+            "Horse",
+            "Elephant",
+            "Dog"
+          ],
+          "correctAnswer": "Camel"
+        },
+        {
+          "question": "How many days are there in a week?",
+          "type": "mcq",
+          "options": [
+            "5 days",
+            "6 days",
+            "7 days",
+            "8 days"
+          ],
+          "correctAnswer": "7 days"
+        },
+        {
+          "question": "Rainbow consists of how many colours?",
+          "type": "mcq",
+          "options": [
+            "5 colours",
+            "6 colours",
+            "7 colours",
+            "8 colours"
+          ],
+          "correctAnswer": "7 colours"
+        },
+        {
+          "question": "Which animal is known as the king of the jungle?",
+          "type": "mcq",
+          "options": [
+            "Elephant",
+            "Lion",
+            "Tiger",
+            "Cheetah"
+          ],
+          "correctAnswer": "Lion"
+        },
+        {
+          "question": "Name the National bird of India?",
+          "type": "mcq",
+          "options": [
+            "Peacock",
+            "Sparrow",
+            "Crow",
+            "Parrot"
+          ],
+          "correctAnswer": "Peacock"
+        },
+        {
+          "question": "How many hours are there in a day?",
           "type": "text",
           "options": [],
-          "correctAnswer": "heyyyyy"
+          "correctAnswer": "24 hours"
+        },
+        {
+          "question": "How many letters are there in the English alphabet?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "26 letters"
+        },
+        {
+          "question": "How many days are there in a year?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "365 days (not a leap year)"
+        },
+        {
+          "question": "How many minutes are there in an hour?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "60 minutes"
+        },
+        {
+          "question": "How many seconds are there in a minute?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "60 seconds"
+        },
+        {
+          "question": "How many seconds make one hour?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "3600 seconds"
+        },
+        {
+          "question": "Baby frog is known as?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "Tadpole"
+        },
+        {
+          "question": "How many consonants are there in the English alphabet?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "21 consonants"
+        },
+        {
+          "question": "How many vowels are there in the English alphabet and name them?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "5 vowels namely a, e, i, o, and u."
+        },
+        {
+          "question": "Name the National animal of India?",
+          "type": "text",
+          "options": [],
+          "correctAnswer": "Tiger"
         }
       ]
     }

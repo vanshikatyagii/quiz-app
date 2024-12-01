@@ -45,7 +45,7 @@ function CreateQuiz() {
         questions: questions,
       };
       try {
-        const response = await axios.post('http://localhost:3001/quizzes', newQuiz, {
+        const response = await axios.post('http://localhost:5000/quizzes', newQuiz, {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -80,7 +80,6 @@ function CreateQuiz() {
           correctAnswer: correctAnswer,
         },
       ]);
-      // Reset inputs for the next question
       setCurrentQuestion("");
       setCurrentOptions([]);
       setCorrectAnswer("");
@@ -90,14 +89,13 @@ function CreateQuiz() {
     }
   };
 
-  // Handle saving the quiz
   const handleSaveQuiz = () => {
     if (quizName && questions.length > 0) {
       const newQuiz = {
         quizName: quizName,
         questions: questions,
       };
-      console.log("Quiz Saved:", newQuiz); // Log the quiz to the console
+      console.log("Quiz Saved:", newQuiz); 
       alert("Quiz saved successfully!");
       handleSubmit();
     } else {
@@ -105,7 +103,6 @@ function CreateQuiz() {
     }
   };
 
-  // Cancel quiz creation
   const handleCancel = () => {
     setQuizName("");
     setQuestions([]);
@@ -123,7 +120,6 @@ function CreateQuiz() {
           Create a New Quiz
         </Typography>
 
-        {/* Quiz Name Input */}
         <TextField
           label="Quiz Name"
           variant="outlined"
@@ -134,7 +130,7 @@ function CreateQuiz() {
           placeholder="Enter the name of your quiz"
         />
 
-        {/* Accordion for adding a question */}
+       
         <Accordion className="mb-6">
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -166,10 +162,10 @@ function CreateQuiz() {
               </Select>
             </FormControl>
 
-            {/* Question Type Specific Inputs */}
+          
             {questionType === "mcq" && (
               <>
-                {/* Add Options */}
+              
                 <TextField
                   label="Option"
                   variant="outlined"
@@ -185,14 +181,14 @@ function CreateQuiz() {
                   </Button>
                 </Box>
 
-                {/* Display added options */}
+                
                 <Box className="mt-4">
                   {currentOptions.map((option, index) => (
                     <Chip key={index} label={option} className="mr-2 mb-2" color="primary" />
                   ))}
                 </Box>
 
-                {/* Select correct answer */}
+               
                 <FormControl component="fieldset" className="mt-4">
                   <FormLabel component="legend">Correct Answer</FormLabel>
                   <RadioGroup
@@ -263,9 +259,6 @@ function CreateQuiz() {
 
         {/* Action Buttons */}
         <Box className="flex justify-between">
-          <Button variant="outlined" onClick={handleCancel} color="secondary">
-            Cancel
-          </Button>
           <Button variant="contained" onClick={handleSaveQuiz} color="primary">
             Save Quiz
           </Button>
