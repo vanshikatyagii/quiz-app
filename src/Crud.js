@@ -4,7 +4,7 @@ import Read from "./Read";
 import Quizz from "./Quizz";
 
 function Crud() {
-  const [activeOperation, setActiveOperation] = useState(""); 
+  const [activeOperation, setActiveOperation] = useState(); 
   const [quizzes, setQuizzes] = useState([]); 
 
   const handleCreateQuiz = (newQuiz) => {
